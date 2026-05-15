@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { Chess } from 'chess.js';
 import { Chessboard } from 'react-chessboard';
 import { io } from 'socket.io-client';
-const socket = io("https://vercel-backend-j71g.onrender.com");
+const socket = io(import.meta.env.VITE_BACKEND_URL || "https://vercel-backend-j71g.onrender.com");
 
 const App = () => {
 
